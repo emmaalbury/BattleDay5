@@ -13,14 +13,7 @@ describe Player do
 
   context "#hp" do
     it "returns the HP of the player" do
-      expect(frank.hp).to eq 100
-    end
-  end
-
-  context "#attack" do
-    it "reduces the opponent's HP" do
-      expect(phillis).to receive(:receive_damage)
-      frank.attack(phillis)
+      expect(frank.hp).to eq described_class::DEFAULT_HP
     end
   end
 
